@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Daily Kolkata | Helpdesk</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Daily Kolkata</h1>
+
+        <nav>
+            <button type="button" id="create-ticket-btn">
+                Create New Ticket
+            </button>
+
+            <button type="button" id="logout-btn">
+                Logout
+            </button>
+
+            <div class="profile">
+
+                <button type="button" id="profile-btn">
+                    A
+                </button>
+
+                <div class="profile-menu">
+                    <h3>Account Details</h3>
+
+                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                    <p><strong>User ID:</strong> <span id="profile-user-id"></span></p>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+<section id="report-section">
+    <h2>Report a Ticket</h2>
+
+    <form id="ticket-form">
+
+        <div>
+            <label for="ticket-title">Ticket Title</label>
+            <input
+                type="text"
+                id="ticket-title"
+                placeholder="Enter ticket title"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="ticket-description">Description</label>
+            <textarea
+                id="ticket-description"
+                rows="4"
+                placeholder="Describe your issue..."
+                required
+            ></textarea>
+        </div>
+
+
+<div>
+    <label for="ticket-priority">Priority</label>
+
+    <select id="ticket-priority" required>
+        <option value="">Select Priority</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+</div>
+
+<button type="submit" id="submit-ticket-btn">
+    Submit Ticket
+</button>
+
+
+    </form>
+</section>
+
+<section id="my-tickets-section">
+
+    <h2>My Tickets</h2>
+
+    <div id="my-ticket-list">
+
+        <!-- Personal tickets will be displayed here -->
+
+    </div>
+
+</section>
+
+
+<section id="active-tickets-section">
+
+    <h2>All Active Tickets</h2>
+
+    <div id="all-active-ticket-list">
+
+        <!-- Active tickets will be displayed here -->
+
+    </div>
+
+</section>
+
+ <script src="/static/script.js"></script>
+
+</body>
+</html>
